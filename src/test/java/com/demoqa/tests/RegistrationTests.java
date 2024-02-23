@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("registration")
 public class RegistrationTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
 
     @Test
+    @Tag("registration")
     void successfulRegistrationAllFields() {
 
         step("Open form", () -> {
@@ -54,6 +54,7 @@ public class RegistrationTests extends TestBase {
     }
 
     @Test
+    @Tag("registration")
     void successfulRegistrationRequiredFields() {
 
         step("Open form", () -> {
@@ -78,6 +79,7 @@ public class RegistrationTests extends TestBase {
     }
 
     @Test
+    @Tag("registration")
     void failedRegistrationBlankFields() {
 
         step("Open form", () -> {
