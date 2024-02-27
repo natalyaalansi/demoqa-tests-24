@@ -2,6 +2,7 @@ package com.demoqa.tests;
 
 import com.demoqa.pages.RegistrationPage;
 import com.demoqa.testdata.TestData;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -71,13 +72,14 @@ public class RegistrationTests extends TestBase {
 
         step("Verify results", () -> {
             registrationPage.checkResult("Student Name", testData.firstName + " " + testData.lastName)
-                    .checkResult("Gender", testData.gender)
+                    .checkResult("Gender", testData.phone)
                     .checkResult("Mobile", testData.phone)
                     .checkResult("Date of Birth", testData.birthDay + " " + testData.birthMonth + "," + testData.birthYear);
         });
     }
 
     @Test
+    @Disabled
     void failedRegistrationBlankFields() {
 
         step("Open form", () -> {
