@@ -72,7 +72,7 @@ public class RegistrationTests extends TestBase {
 
         step("Verify results", () -> {
             registrationPage.checkResult("Student Name", testData.firstName + " " + testData.lastName)
-                    .checkResult("Gender", testData.phone)
+                    .checkResult("Gender", testData.gender)
                     .checkResult("Mobile", testData.phone)
                     .checkResult("Date of Birth", testData.birthDay + " " + testData.birthMonth + "," + testData.birthYear);
         });
